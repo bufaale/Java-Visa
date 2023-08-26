@@ -62,10 +62,28 @@ For example, to run the testCreateUser method from the UserTests class:
 
 `mvn clean test -Dtest=UserTests#testCreateUser`
 
+## Running Test Suites Using TestNG XML
+The project includes TestNG XML configuration files (testng.xml) that define test suites and their corresponding test classes. Here's how you can run the test suites using these XML files:
+
+Running a Specific Test Suite:
+
+To run a specific test suite defined in the testng.xml file, you can use Maven from the project's root directory:
+
+`mvn clean test -DsuiteXmlFile=testng.xml
+`
+
 ## Running Tests from the Executable JAR
 
 You can also run the tests using the generated executable JAR:
 
 `java -jar target/Java-Visa-1.0-SNAPSHOT-jar-with-dependencies.jar`
 
-This will execute the tests and generate the HTML test reports.
+You can also run individual test using the generated executable JAR:
+
+`java -jar target/Java-Visa-1.0-SNAPSHOT-jar-with-dependencies.jar com.petstore.tests.UserTests`
+
+You can also run TestNG test suites using the generated executable JAR:
+
+`java -jar target/Java-Visa-1.0-SNAPSHOT-jar-with-dependencies.jar path/to/testng.xml`
+
+remember replace the path where there is testng.xml file

@@ -10,4 +10,9 @@
             <class name="com.petstore.tests.StoreTests"/>
         </classes>
     </test>
+    <test name="PetTests">
+        <classes>
+            <class name="com.petstore.tests.PetTests"/>
+        </classes>
+    </test>
 </suite>
