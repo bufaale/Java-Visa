@@ -3,14 +3,16 @@
 This repository contains automated tests for the Pet Store API using Java, Maven, Rest-Assured, TestNG, and Extent Reports.
 
 ## Technologies Used
+- Java: Chosen as the primary programming language due to its widespread adoption and versatility in test automation.
+- Maven: Used as the build tool for efficient dependency management, project setup, and integration with CI/CD pipelines.
+- Rest-Assured: Employed for API testing due to its simplicity, readability, and comprehensive documentation.
+- TestNG: Selected as the test framework for its flexibility, parallel test execution capabilities, and rich reporting features.
+- Extent Reports: Utilized for generating detailed and visually appealing test reports for easy result analysis.
 
-- Java
-- Maven
-- Rest-Assured
-- TestNG
-- Extent Reports
-- Cucumber (optional, if added)
+## Approach
+For the automation of the Pet Store API tests:
 
+I started by gaining a deep understanding of the API's functionalities, designed test cases to cover different scenarios, and then implemented the automation framework. I used Rest-Assured to interact with the API and TestNG to organize and execute the tests. As the API evolved, I kept my tests updated to ensure reliable and meaningful results.
 ## Setup and Execution
 
 ## Pre-condition
@@ -38,7 +40,12 @@ Before running the tests, make sure you have set up the Swagger Petstore API ser
 
 Test reports are generated using Extent Reports. You can find the HTML reports in the test-output directory after running the tests.
 
-Running Individual Test Classes
+**Viewing the Report**
+
+To view the report, simply open a web browser (such as Chrome, Firefox, etc.) and navigate to the path of the ExtentReport.html file mentioned above. This will open the report in your browser, where you can see detailed execution details of each test case, including results, times, and more.
+
+## Running Individual Test Classes
+
 You can run individual test classes using Maven. Replace TestClass with the actual name of the test class you want to run.
 
 `mvn clean test -Dtest=TestClass`
