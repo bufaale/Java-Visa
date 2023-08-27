@@ -28,7 +28,7 @@ public abstract class TestBase {
 
         // Initialize the request specification with default headers
         requestSpec = RestAssured.given()
-//                .contentType("application/json")
+                .contentType("application/json")
                 .header("Accept", "application/json");
 
         // Initialize Extent Reports
