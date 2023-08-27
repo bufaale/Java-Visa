@@ -38,11 +38,19 @@ Before running the tests, make sure you have set up the Swagger Petstore API ser
 
 ## Generating HTML Test Reports:
 
-Test reports are generated using Extent Reports. You can find the HTML reports in the test-output directory after running the tests.
+Test reports are generated using Allure. You can generate and view the Allure report with the following steps:
+
+**Generate Allure Reports**
+
+After running the tests, execute the following command to generate Allure reports:
+
+``allure generate allure-results``
 
 **Viewing the Report**
 
-To view the report, simply open a web browser (such as Chrome, Firefox, etc.) and navigate to the path of the ExtentReport.html file mentioned above. This will open the report in your browser, where you can see detailed execution details of each test case, including results, times, and more.
+To view the report, use the following command to launch the Allure server:
+
+`allure serve allure-results`
 
 ## Running Individual Test Classes
 

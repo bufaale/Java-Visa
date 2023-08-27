@@ -6,9 +6,7 @@ import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
 import io.restassured.specification.RequestSpecification;
-import com.aventstack.extentreports.ExtentReports;
-import com.aventstack.extentreports.ExtentTest;
-import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
+
 
 /**
  * Abstract base test class that sets up and cleans up the RestAssured configuration.
@@ -16,9 +14,6 @@ import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 public abstract class TestBase {
 
     protected RequestSpecification requestSpec;
-    protected ExtentReports extentReports;
-    protected ExtentHtmlReporter htmlReporter;
-    protected ExtentTest extentTest;
 
     @BeforeClass
     public void setup() {
@@ -31,10 +26,6 @@ public abstract class TestBase {
                 .contentType("application/json")
                 .header("Accept", "application/json");
 
-        // Initialize Extent Reports
-        extentReports = new ExtentReports();
-        htmlReporter = new ExtentHtmlReporter("test-output/ExtentReport.html");
-        extentReports.attachReporter(htmlReporter);
     }
 
     @AfterMethod
@@ -44,11 +35,5 @@ public abstract class TestBase {
                 .contentType("application/json")
                 .header("Accept", "application/json");
 
-        // Create a test with the method name as the test name
-        String testName = result.getMethod().getMethodName();
-        extentTest = extentReports.createTest(testName);
-
-        // Flush Extent Reports to generate the HTML report
-        extentReports.flush();
     }
 }
